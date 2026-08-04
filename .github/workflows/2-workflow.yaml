@@ -1,0 +1,14 @@
+name: My_second_Workflow
+on:
+    push:
+        branches: main     #autoamtically trigger the workflow when we push to main branch
+jobs:
+  my_first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first_step
+        run: echo "this is my first workflow"
+      - name: second_step
+        run: |             #if we want to run multiple commands in a single step we can use pipe operator
+          echo "this is my second step"
+          echo "this is my third step"
